@@ -1,0 +1,8 @@
+#!/bin/bash
+
+loc=$(which $1)
+if [ -f "$loc" ]; then
+    cat "$loc"
+else
+    echo "can not find file: $1"
+fi
