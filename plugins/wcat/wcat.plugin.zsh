@@ -9,7 +9,7 @@
 # this is written using the similar function in the sudo plugin 
 # ------------------------------------------------------------------------------
 
-yaml-command-line() {
+wcat-command-line() {
     [[ -z $BUFFER ]] && LBUFFER="$(fc -ln -1)"
 
     # Save beginning space
@@ -23,9 +23,9 @@ yaml-command-line() {
     LBUFFER="wcat ${WHITESPACE}${LBUFFER}"
 }
 
-zle -N yaml-command-line
+zle -N wcat-command-line
 
-# Defined shortcut keys: ctrl+\
-bindkey -M emacs '``' yaml-command-line
-bindkey -M vicmd '``' yaml-command-line
-bindkey -M viins '``' yaml-command-line
+# Defined shortcut keys: ``
+bindkey -M emacs '``' wcat-command-line
+bindkey -M vicmd '``' wcat-command-line
+bindkey -M viins '``' wcat-command-line
